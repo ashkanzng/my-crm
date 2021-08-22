@@ -38,6 +38,7 @@ public class HomeView extends HorizontalLayout {
         initializing();
         createTableForm();
         showTables();
+        add(new VerticalLayout(layoutComponent.getGridLayout()));
         add(layoutComponent.getMainLayout());
     }
 
@@ -48,7 +49,7 @@ public class HomeView extends HorizontalLayout {
         grid = new Grid<>();
         grid.addItemClickListener(e -> fillDataForm(e.getItem()));
         grid.setMaxHeight("450px");
-        //layoutComponent.getGridLayout().add(grid);
+        layoutComponent.getGridLayout().add(grid);
         dataForm = new FormLayout();
         dataForm.setResponsiveSteps(
                 new FormLayout.ResponsiveStep("0", 1),
