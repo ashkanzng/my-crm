@@ -10,10 +10,12 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.listbox.ListBox;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.splitlayout.SplitLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+
 import java.util.*;
 
 @PageTitle("Home")
@@ -38,8 +40,9 @@ public class HomeView extends HorizontalLayout {
         initializing();
         createTableForm();
         showTables();
-        add(new VerticalLayout(layoutComponent.getGridLayout()));
-        add(layoutComponent.getMainLayout());
+        SplitLayout splitLayout = new SplitLayout(layoutComponent.getMainLayout(), layoutComponent.getGridLayout());
+        splitLayout.setOrientation(SplitLayout.Orientation.VERTICAL);
+        add(splitLayout);
     }
 
     private void initializing(){

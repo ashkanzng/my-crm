@@ -6,15 +6,13 @@ import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.PageTitle;
-import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
 
 
 /**
  * The main view is a top-level placeholder for other views.
  */
-@PWA(name = "vaadin-crm", shortName = "vaadin-crm", enableInstallPrompt = false)
-@Theme(themeFolder = "vaadin-crm")
+//@PWA(name = "vaadin-crm", shortName = "vaadin-crm", enableInstallPrompt = false)
+//@Theme(themeFolder = "vaadin-crm")
 @PageTitle("Main")
 public class MainLayout extends AppLayout {
 
